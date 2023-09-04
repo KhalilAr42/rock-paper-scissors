@@ -1,9 +1,10 @@
 function getComputerChoice() {
-    choices = ["rock","paper","scissors"];
+    
+    choices = ["rock","paper","scissors"]
 
-    random_index = Math.round(( Math.random() * 10 ) % 2,1)
+    random_index = Math.floor(Math.random() * choices.length)
 
-    return choices[random_index];
+    return choices[random_index]
 }
 
 function playRound(playerSelection, computerSelection) {
