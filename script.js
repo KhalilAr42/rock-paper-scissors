@@ -1,8 +1,8 @@
 function getComputerChoice() {
     
-    choices = ["rock","paper","scissors"]
+    const choices = ["rock","paper","scissors"]
 
-    random_index = Math.floor(Math.random() * choices.length)
+    let random_index = Math.floor(Math.random() * choices.length)
 
     return choices[random_index]
 }
@@ -10,12 +10,12 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection) {
 
     //Define all possible cases where the player win
-    playerWinsWithRock = playerSelection == "rock" && computerSelection == "scissors";
-    playerWinsWithPaper = playerSelection == "paper" && computerSelection == "rock";
-    playerWinsWithScisors = playerSelection == "scissors" && computerSelection == "paper";
+    let playerWinsWithRock = playerSelection == "rock" && computerSelection == "scissors";
+    let playerWinsWithPaper = playerSelection == "paper" && computerSelection == "rock";
+    let playerWinsWithScisors = playerSelection == "scissors" && computerSelection == "paper";
 
     //If this boolean has any true then the player won, else the computer won!
-    playerWin = playerWinsWithRock || playerWinsWithPaper || playerWinsWithScisors
+    let playerWin = playerWinsWithRock || playerWinsWithPaper || playerWinsWithScisors
 
     //If the player and computer have the same selection then it's draw no need to verify anything
     if(playerSelection === computerSelection) {
